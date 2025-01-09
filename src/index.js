@@ -47,7 +47,7 @@ async function main() {
       'Authorization': `Bearer ${DIGITALOCEAN_TOKEN}`,
     },
   });
-
+console.log(resp);
   if (!resp.ok) {
     throw Error("Error while trying to get the list of trusted sources");
   }
