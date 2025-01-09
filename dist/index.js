@@ -26592,6 +26592,7 @@ async function getIpAddress() {
 
   const response = await fetch('https://api.ipify.org');
   if (!response.ok) {
+    console.log(response);
     throw new Error("Couldn't get IP address");
   }
   return await response.text();
@@ -26635,8 +26636,8 @@ async function main() {
       'Authorization': `Bearer ${DIGITALOCEAN_TOKEN}`,
     },
   });
-console.log(resp);
   if (!resp.ok) {
+    console.log(resp);
     throw Error("Error while trying to get the list of trusted sources");
   }
 
@@ -26680,6 +26681,7 @@ console.log(resp);
   });
 
   if (!respPut.ok) {
+    console.log(respPut);
     throw new Error("Couldn't update trusted sources");
   }
 
