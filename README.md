@@ -41,7 +41,7 @@ In your workflow:
 ```yaml
 # Step 1, add the IP address
 - name: Add IP address to trusted source (managed database)
-  uses: GarreauArthur/manage-digital-ocean-managed-database-trusted-sources-gh-action@main
+  uses: VNDRMKT/manage-digital-ocean-managed-database-trusted-sources-gh-action@main
   with:
     action: "add"
     database_id: ${{ secrets.DATABASE_ID }}
@@ -53,7 +53,7 @@ In your workflow:
 
 # Step 3, remove the IP address
 - name: Remove IP address to trusted source (managed database)
-  uses: GarreauArthur/manage-digital-ocean-managed-database-trusted-sources-gh-action@main
+  uses: VNDRMKT/manage-digital-ocean-managed-database-trusted-sources-gh-action@main
   with:
     action: "remove"
     database_id: ${{ secrets.DATABASE_ID }}
